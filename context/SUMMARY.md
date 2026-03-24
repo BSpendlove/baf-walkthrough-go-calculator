@@ -6,13 +6,13 @@ This file tracks project state. Every agent session should read this before star
 
 ## Current State
 
-CLI Calculator — no work completed yet. File an issue to get started.
+CLI Calculator — core implementation complete.
 
 ## Completed Specs
 
 | Spec | Issue | Status | Summary |
 |------|-------|--------|---------|
-| *(none yet)* | | | |
+| 1-cli-calculator | #1 | Implemented | Go CLI calculator with recursive descent parser, operator precedence, parentheses, history (100 entries), --version flag |
 
 ## Key Decisions
 
