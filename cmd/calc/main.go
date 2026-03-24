@@ -15,14 +15,14 @@ var Version = "0.1.0"
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Fprintln(os.Stderr, "usage: calc <expression> | calc history | calc clear | calc --version")
+		fmt.Fprintln(os.Stderr, "usage: calc <expression> | calc history | calc clear | calc --version | calc --whoami")
 		os.Exit(1)
 	}
 
 	arg := os.Args[1]
 
 	switch {
-	case arg == "--version":
+	case arg == "--version" || arg == "--whoami":
 		fmt.Printf("calc v%s\n", Version)
 
 	case arg == "history":
