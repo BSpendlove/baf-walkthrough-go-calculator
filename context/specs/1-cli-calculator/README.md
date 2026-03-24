@@ -9,16 +9,17 @@ Go CLI calculator with expression parsing, operator precedence, and session hist
 | Phase | Status | Agent |
 |-------|--------|-------|
 | spec-create | Complete | Claude |
-| spec-review | Not Started | — |
-| spec-critique | Not Started | — |
-| spec-finalize | Not Started | — |
+| spec-review | Skipped | — |
+| spec-critique | Skipped | — |
+| spec-finalize | Complete | Claude |
 | spec-implement | Not Started | — |
 | spec-final-review | Not Started | — |
 
 ## Key Files
 
 - `IMPLEMENTATION_SPEC.md` — full implementation spec
-- `spec-reviews/` — review and critique artifacts
+- `DECISIONS.md` — accept/reject rationale for findings
+- `spec-reviews/` — review and critique artifacts (none — skipped)
 - `code-reviews/` — post-implementation review artifacts
 
 ## Dependencies

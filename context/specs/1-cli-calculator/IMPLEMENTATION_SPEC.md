@@ -41,19 +41,22 @@ This avoids external dependencies and keeps the implementation simple.
 ```bash
 calc "2 + 3 * 4"          # → 14
 calc "(2 + 3) * 4"         # → 20
-calc history               # → last 50 expressions + results
+calc history               # → last 100 expressions + results
 calc clear                 # → clears history
+calc --version             # → calc v0.1.0
 ```
 
 - Single expression argument (quoted to prevent shell expansion of `*`)
 - Reserved subcommands: `history`, `clear`
+- Flags: `--version` prints version string (`calc v<version>`) and exits
+- Version is set via a `Version` variable in `cmd/calc/main.go` (can be overridden at build time with `-ldflags`)
 - Exit code 0 on success, 1 on error
 
 ### History Storage
 
 - File-backed: `~/.calc_history` (one JSON line per entry)
 - Each entry: `{"expr": "2 + 3", "result": 14, "time": "2026-03-24T..."}`
-- `history` command shows last 50 entries, most recent last
+- `history` command shows last 100 entries, most recent last
 - `clear` command truncates the file
 - History file created on first write if it doesn't exist
 - No locking needed — single-user CLI tool
@@ -101,7 +104,7 @@ No configuration files or environment variables. The history file location (`~/.
 ### Unit tests
 
 - **Parser:** arithmetic correctness (all 4 operators), operator precedence, parentheses (including nested), division by zero error, malformed expression errors, whitespace handling, negative numbers, decimal numbers
-- **History:** store and load entries, load returns last 50 max, clear removes all entries, handles missing file gracefully
+- **History:** store and load entries, load returns last 100 max, clear removes all entries, handles missing file gracefully
 
 ### Integration
 
