@@ -12,7 +12,7 @@ Go CLI calculator with expression parsing, operator precedence, and session hist
 | spec-review | Skipped | — |
 | spec-critique | Skipped | — |
 | spec-finalize | Complete | Claude |
-| spec-implement | Not Started | — |
+| spec-implement | Complete | Claude |
 | spec-final-review | Not Started | — |
 
 ## Key Files
